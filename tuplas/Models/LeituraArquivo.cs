@@ -9,7 +9,7 @@
                 string[] arquivo = File.ReadAllLines(caminho);
                 return (true, arquivo, arquivo.Length);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return (false, new string[0], 0);
             }
