@@ -1,14 +1,47 @@
 ﻿using tuplas.Models;
+using Newtonsoft.Json;
+
+
+string conteudoArquivo = File.ReadAllText("Vendas.json");
+
+// o nome das propriedades da minha classe tem que ser exatamente as mesma do meu arquivo que eu estou mapeando, caso contrário, o valor do campo vai ficar vazio.
+List<Venda> listaVenda = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo);
+
+foreach (Venda item in listaVenda)
+{
+  Console.WriteLine(item.Id);
+}
 
 
 
 
 
-int n = 11;
-bool ehPar = n % 2 == 0;
+// List<Venda> vendas = new List<Venda>();
+
+// DateTime dataAtual = DateTime.Now;
+
+// Venda v1 = new Venda(1, "Material para construção", 300.00M, dataAtual);
+// Venda v2 = new Venda(1, "Software", 700.00M, dataAtual);
+
+// vendas.Add(v1);
+// vendas.Add(v2);
+
+// foreach (Venda item in vendas)
+// {
+//   Console.WriteLine(item.DataVenda);
+// }
+
+// string serialize = JsonConvert.SerializeObject(vendas);
+
+// File.WriteAllText("Vendas.json", serialize);
 
 
-Console.WriteLine($"O número {n} é {(ehPar ? "Par" : "Impar")}");
+
+// int n = 11;
+// bool ehPar = n % 2 == 0;
+
+
+// Console.WriteLine($"O número {n} é {(ehPar ? "Par" : "Impar")}");
 
 
 
