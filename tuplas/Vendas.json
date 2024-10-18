@@ -1,14 +1,16 @@
 [
   {
     "Id": 1,
-    "Produto": "Material para construção",
+    "Nome_Produto": "Material para construção",
     "Preco": 300.00,
-    "DataVenda": "2024-10-17T08:39:06.384785-03:00"
+    "DataVenda": "2024-10-17T08:39:06.384785-03:00",
+    "Desconto": 10
   },
   {
     "Id": 2,
-    "Produto": "Software",
+    "Nome_Produto": "Software",
     "Preco": 700.00,
-    "DataVenda": "2024-10-17T08:39:06.384785-03:00"
+    "DataVenda": "2024-10-17T08:39:06.384785-03:00",
+    "Desconto": null
   }
 ]

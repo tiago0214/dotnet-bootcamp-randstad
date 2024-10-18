@@ -2,16 +2,59 @@
 using Newtonsoft.Json;
 
 
+
+
+
+// bool? desejaReceberImail = true;
+
+
+// if (desejaReceberImail.HasValue && desejaReceberImail.Value)
+// {
+//   Console.WriteLine("User want to receive email");
+// }
+// else
+// {
+//   Console.WriteLine("User don't want to receive email");
+// }
+
+
+
+
 string conteudoArquivo = File.ReadAllText("Vendas.json");
 
-// o nome das propriedades da minha classe tem que ser exatamente as mesma do meu arquivo que eu estou mapeando, caso contrário, o valor do campo vai ficar vazio.
 List<Venda> listaVenda = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo);
 
 foreach (Venda item in listaVenda)
 {
-  Console.WriteLine(item.Id);
+  Console.WriteLine($"{{\n  Id:{item.Id}\n  Produto : {item.Produto}\n  Preço: {item.Preco}\n  Data de Venda: {item.DataVenda}\n  {(item.Desconto.HasValue ? $"Desconto: {item.Desconto}\n" : "")}}}");
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+// string conteudoArquivo = File.ReadAllText("Vendas.json");
+
+// // o nome das propriedades da minha classe tem que ser exatamente as mesma do meu arquivo que eu estou mapeando, caso contrário, o valor do campo vai ficar vazio.
+// List<Venda> listaVenda = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo);
+
+// foreach (Venda item in listaVenda)
+// {
+//   Console.WriteLine($"{{\n  Id:{item.Id}\n  Produto : {item.Produto}\n  Preço: {item.Preco}\n  Data de Venda: {item.DataVenda}\n}}");
+// }
+
+// Venda v1 = new Venda();
+// v1.Produto = "Algo";
+
+// Console.WriteLine(v1.Produto);
 
 
 
