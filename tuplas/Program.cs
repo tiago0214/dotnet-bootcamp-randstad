@@ -5,6 +5,45 @@ using Newtonsoft.Json;
 
 
 
+string conteudoArquivo = File.ReadAllText("Vendas.json");
+
+List<Venda> listaVenda = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo);
+
+var listaAnonima = listaVenda.Select(x => new { x.Produto, x.Preco });
+
+
+
+foreach (var item in listaAnonima)
+{
+  Console.WriteLine("{");
+  Console.WriteLine(" " + item.Produto);
+  Console.WriteLine(" " + item.Preco);
+  Console.WriteLine("}");
+
+}
+
+
+
+
+
+
+
+
+
+
+// // tipos anonimos
+// var tipoAnonimo = new { Nome = "Tiago", Idade = 30 };
+
+// Console.WriteLine(tipoAnonimo.Nome);
+// Console.WriteLine(tipoAnonimo.Idade);
+
+
+
+
+
+
+
+
 // bool? desejaReceberImail = true;
 
 
@@ -20,14 +59,14 @@ using Newtonsoft.Json;
 
 
 
-string conteudoArquivo = File.ReadAllText("Vendas.json");
+// string conteudoArquivo = File.ReadAllText("Vendas.json");
 
-List<Venda> listaVenda = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo);
+// List<Venda> listaVenda = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo);
 
-foreach (Venda item in listaVenda)
-{
-  Console.WriteLine($"{{\n  Id:{item.Id}\n  Produto : {item.Produto}\n  Preço: {item.Preco}\n  Data de Venda: {item.DataVenda}\n  {(item.Desconto.HasValue ? $"Desconto: {item.Desconto}\n" : "")}}}");
-}
+// foreach (Venda item in listaVenda)
+// {
+//   Console.WriteLine($"{{\n  Id:{item.Id}\n  Produto : {item.Produto}\n  Preço: {item.Preco}\n  Data de Venda: {item.DataVenda}\n  {(item.Desconto.HasValue ? $"Desconto: {item.Desconto}\n" : "")}}}");
+// }
 
 
 
