@@ -5,22 +5,34 @@ using Newtonsoft.Json;
 
 
 
-string conteudoArquivo = File.ReadAllText("Vendas.json");
 
-List<Venda> listaVenda = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo);
-
-var listaAnonima = listaVenda.Select(x => new { x.Produto, x.Preco });
-
+// variavel dynamic -> igual o JS, permite ficar mudar o tipo da variavel.
+// dynamic variavel = 4;
+// variavel = "texto";
 
 
-foreach (var item in listaAnonima)
-{
-  Console.WriteLine("{");
-  Console.WriteLine(" " + item.Produto);
-  Console.WriteLine(" " + item.Preco);
-  Console.WriteLine("}");
 
-}
+
+
+
+
+
+// string conteudoArquivo = File.ReadAllText("Vendas.json");
+
+// List<Venda> listaVenda = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo);
+
+// var listaAnonima = listaVenda.Select(x => new { x.Produto, x.Preco });
+
+
+
+// foreach (var item in listaAnonima)
+// {
+//   Console.WriteLine("{");
+//   Console.WriteLine(" " + item.Produto);
+//   Console.WriteLine(" " + item.Preco);
+//   Console.WriteLine("}");
+
+// }
 
 
 
