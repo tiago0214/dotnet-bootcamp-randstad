@@ -6,6 +6,22 @@ using Newtonsoft.Json;
 
 
 
+string text = "Meu texto";
+text.MeuMetodo();
+
+
+
+
+
+
+// INDEXERS
+
+// MeuArray<string> meuArr = new MeuArray<string>();
+// meuArr[0] = "Alou";
+
+// Console.WriteLine(meuArr[0]);
+
+
 // variavel dynamic -> igual o JS, permite ficar mudar o tipo da variavel.
 // dynamic variavel = 4;
 // variavel = "texto";
