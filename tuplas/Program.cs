@@ -3,11 +3,8 @@ using Newtonsoft.Json;
 
 
 
-
-
-
-string text = "Meu texto";
-text.MeuMetodo();
+// string text = "Meu texto";
+// text.MeuMetodo();
 
 
 
