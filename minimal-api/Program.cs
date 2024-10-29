@@ -3,7 +3,7 @@ var app = builder.Build();
 
 app.MapGet("/", () => "Hello World!");
 
-app.MapPost("/login", (LoginDTO loginDTO) =>
+app.MapPost("/login", (Minimal_Api.Dominio.DTOs.LoginDTO loginDTO) =>
 {
   Console.WriteLine(loginDTO.Nome);
   if (loginDTO.Email == "tiago0214" && loginDTO.Senha == "123123")
@@ -17,10 +17,3 @@ app.MapPost("/login", (LoginDTO loginDTO) =>
 });
 
 app.Run();
-
-class LoginDTO
-{
-  public string? Senha { get; set; }
-  public string? Email { get; set; }
-  public string? Nome { get; set; }
-}
