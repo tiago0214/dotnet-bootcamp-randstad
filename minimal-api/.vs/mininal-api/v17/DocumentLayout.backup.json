@@ -40,14 +40,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Minimal-api.csproj",
+              "Title": "Minimal-api",
               "DocumentMoniker": "C:\\Users\\tiago\\dev\\dotnet-bootcamp\\minimal-api\\Minimal-api.csproj",
               "RelativeDocumentMoniker": "Minimal-api.csproj",
               "ToolTip": "C:\\Users\\tiago\\dev\\dotnet-bootcamp\\minimal-api\\Minimal-api.csproj",
               "RelativeToolTip": "Minimal-api.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-02T17:45:58.508Z"
+              "WhenOpened": "2024-11-02T17:45:58.508Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -59,7 +60,8 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T01:20:06.535Z"
+              "WhenOpened": "2024-10-28T01:20:06.535Z",
+              "EditorCaption": ""
             }
           ]
         }
